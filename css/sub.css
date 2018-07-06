@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/*************************************************************
+    헤더 
+***************************************************************/
+header {
+  background: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header .headerWrap {
+  width: 1000px;
+  height: 77px;
+  line-height: 77px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header .headerWrap h1 {
+  float: left;
+}
+
+header .headerWrap h1 .pcLogo {
+  display: block;
+}
+
+header .headerWrap h1 .mobileLogo {
+  display: none;
+}
+
+header .headerWrap nav {
+  display: block;
+  float: right;
+}
+
+header .headerWrap nav > ul > li {
+  display: inline-block;
+  padding-left: 80px;
+  font-size: 1.8rem;
+  font-family: 'Nanum Barun Gothic' , sans-serif;
+  position: relative;
+}
+
+header .headerWrap nav > ul > li > a {
+  display: block;
+  position: relative;
+}
+
+header .headerWrap nav > ul > li > a hr {
+  display: none;
+  border: none;
+  height: 4px;
+  background: #06b99e;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+header .headerWrap nav > ul > li:first-child {
+  padding-left: 0;
+}
+
+header .headerWrap nav > ul > li:first-child > ul {
+  padding-left: 0;
+}
+
+header .headerWrap nav > ul > li:hover > ul {
+  display: block;
+}
+
+header .headerWrap nav > ul > li:hover hr {
+  display: block;
+}
+
+header .headerWrap nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 120%;
+  line-height: 1.4;
+  padding-top: 30px;
+  padding-left: 80px;
+  border-top: solid 4px transparent;
+}
+
+header .headerWrap nav > ul > li > ul > li {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+header .headerWrap nav > ul > li > ul > li a {
+  display: block;
+  color: #686868;
+}
+
+header .headerWrap .mobileMenuBtn {
+  display: none;
+}
+
+header .blind {
+  background: #fff;
+  height: 300px;
+  display: none;
+}
+
+/*************************************************************
+    반응형 헤더
+***************************************************************/
+@media screen and (max-width: 1024px) {
+  header {
+    background: #fff;
+    position: relative;
+  }
+  header .headerWrap {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    line-height: inherit;
+    padding: 7% 0;
+  }
+  header .headerWrap h1 {
+    float: none;
+  }
+  header .headerWrap h1 .pcLogo {
+    display: none;
+  }
+  header .headerWrap h1 .mobileLogo {
+    display: inline-block;
+    width: 42%;
+  }
+  header .headerWrap h1 .mobileLogo > img {
+    width: 100%;
+  }
+  header .headerWrap nav {
+    display: none;
+    float: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+  header .headerWrap nav > ul > li {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 4rem;
+    text-align: left;
+    background: #fff;
+    border-bottom: solid 1px #c9c9c9;
+    text-indent: 5%;
+    padding: 3% 0 0;
+  }
+  header .headerWrap nav > ul > li > a {
+    display: block;
+    padding-bottom: 3%;
+  }
+  header .headerWrap nav > ul > li > a hr {
+    display: none;
+  }
+  header .headerWrap nav > ul > li:first-child {
+    border-top: solid 1px #c9c9c9;
+  }
+  header .headerWrap nav > ul > li:hover > ul {
+    display: block;
+    border-top: solid 1px #c9c9c9;
+  }
+  header .headerWrap nav > ul > li:hover hr {
+    display: none;
+  }
+  header .headerWrap nav > ul > li > ul {
+    display: none;
+    width: 100%;
+    position: static;
+    padding-top: 0;
+    padding: 2%;
+    border-top: solid 1px #c9c9c9;
+    background: #f8f8f8;
+  }
+  header .headerWrap nav > ul > li > ul > li {
+    color: #686868;
+    font-size: 3rem;
+    margin: 0;
+    padding: 1% 0;
+  }
+  header .headerWrap nav > ul > li > ul > li hr {
+    display: none;
+  }
+  header .headerWrap .mobileMenuBtn {
+    display: inline-block;
+    width: 7%;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer;
+  }
+  header .headerWrap .mobileMenuBtn > img {
+    width: 100%;
+  }
+  header .blind {
+    display: none !important;
+  }
+}
+
+/* 푸터 */
+footer .footerWrap {
+  width: 1000px;
+  margin: 40px auto 0;
+  padding: 35px 0 80px;
+  font-family: 'Nanum Barun Gothic' , sans-serif;
+  font-size: 1rem;
+  border-top: solid 1px #d2d2d2;
+  position: relative;
+}
+
+footer .footerWrap > h2 {
+  color: #383838;
+  margin-bottom: 12px;
+}
+
+footer .footerWrap > p {
+  color: #adadad;
+}
+
+footer .footerWrap .famillySite {
+  position: absolute;
+  top: 35px;
+  right: 2px;
+  width: 150px;
+  background: #c8c8c8;
+  color: #fff;
+  padding: 7px;
+  font-size: 1rem;
+  font-family: "Nanum Gothic", sans-serif;
+  cursor: pointer;
+}
+
+footer .footerWrap .famillySite > img {
+  position: absolute;
+  top: 11px;
+  right: 7px;
+}
+
+footer .footerWrap .famillySite > ul {
+  display: none;
+  padding-top: 5px;
+}
+
+footer .footerWrap .famillySite > ul > li {
+  padding: 5px 0;
+}
+
+footer .footerWrap .famillySite > ul > li > a {
+  color: #fff;
+}
+
+footer .footerWrap .famillySite:hover > ul {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  footer .footerWrap {
+    width: 90%;
+    margin: 40px auto 0;
+  }
+  footer .footerWrap > h2 {
+    font-size: 2.5rem;
+  }
+  footer .footerWrap > p {
+    font-size: 2rem;
+  }
+  footer .footerWrap .famillySite {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 20%;
+  }
+}
+
+/***********************************************************
+    서브비주얼
+************************************************************/
+.subVisual {
+  height: 282px;
+  background-image: url("../images/sub/subVisual.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.subVisual .textBox {
+  position: absolute;
+  bottom: 60px;
+  color: #fff;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.subVisual .textBox > h2 {
+  font-size: 3rem;
+}
+
+.subVisual .textBox > p {
+  font-size: 4.6rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .subVisual {
+    background: none;
+    height: 200px;
+  }
+  .subVisual .textBox {
+    width: 100%;
+    color: #000;
+  }
+  .subVisual .textBox > h2 {
+    font-size: 7rem;
+    font-family: 'Nanum Barun Gothic' , sans-serif;
+  }
+  .subVisual .textBox > p br {
+    display: none;
+  }
+}
+
+/***********************************************************
+    서브네비게이션
+************************************************************/
+.subNav {
+  background: #00a088;
+  text-align: center;
+}
+
+.subNav > ul > li {
+  display: inline-block;
+  height: 53px;
+  line-height: 53px;
+  padding: 0 60px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-left: solid 1px #4fbaac;
+}
+
+.subNav > ul > li:last-child {
+  border-right: solid 1px #4fbaac;
+}
+
+.subNav > ul > li a {
+  color: #96c9c1;
+}
+
+.subNav > ul > li.on a {
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .subNav {
+    background: #fff;
+  }
+  .subNav > ul > li {
+    border: none;
+    font-size: 3.6rem;
+    height: auto;
+    line-height: 1;
+    padding: 2% 5%;
+    font-family: 'Nanum Barun Gothic' , sans-serif;
+    background: #cdcdcd;
+    border: none;
+    font-weight: normal;
+  }
+  .subNav > ul > li.on {
+    background: #00a088;
+  }
+  .subNav > ul > li a {
+    color: #fff;
+  }
+  .subNav > ul > li:last-child {
+    border-right: none;
+  }
+}
+
+/***********************************************************
+    컨텐츠
+************************************************************/
+.contentsWrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 300px 0;
+  text-align: center;
+  font-size: 5rem;
+  color: #7b7b7b;
+}
+
+@media screen and (max-width: 1024px) {
+  .contentsWrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=sub.css.map */

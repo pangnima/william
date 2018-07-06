@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import "common.scss";
+body { background: #ededed;}
+
+/*************************************************************
+    메인 비주얼 
+***************************************************************/
+.mainVisual {
+    background:url('../images/mainVisual.png') no-repeat center / cover ;
+    height:768px;
+    > img { display:none;}
+}
+@include tab{ // 1024
+    // 메인비주얼
+    .mainVisual{
+        height:auto;
+        background: url(../images/mobile/mainVisual.png) no-repeat;
+        background-size: 100%;
+        background-position: center;
+        > img { 
+            display:block;
+            visibility: hidden;
+            width:100%;
+        }
+    }
+}
+
+
+/*************************************************************
+    컨텐츠영역 
+***************************************************************/
+//ourBrand
+.ourBrand {
+    width:1000px;
+    margin:80px auto;
+    > div {
+        width:283px; height:286px;
+        float:left;
+        margin-right:32px;
+        margin-bottom:22px;
+        font-family: 'Nanum Square' , sans-serif; 
+        position:relative;
+        box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.23);
+        &:first-child { box-shadow : none;}
+        > img { 
+            width:100%;
+            &.mobileImg { display: none;}
+        }
+        &.big {
+            width:369px; height:600px;
+            margin:0;
+            float:right;
+        }
+        > h2 {
+            font-size:2.4rem;
+            margin-top:50px;
+        }
+        > hr {
+            display:inline-block;
+            border:none;
+            width:25px; height:1px;
+            background: #222222;
+            margin:20px 0;
+        }
+        > p {
+            font-size:3.4rem;
+            letter-spacing: -0.2px;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+        &:hover { 
+            > .overBox { display:block;}
+        }
+        // 오버시
+        > .overBox {
+            position:absolute;
+            background:rgba(0,0,0,0.5);
+            top:0; left:0;
+            width:100%; height:100%;
+            color:#fff;
+            text-align: center;
+            display: none;
+            > div {
+                position: absolute;
+                top:50%; left:50%;
+                width:100%;
+                transform: translate(-50%,-50%);
+                > h2 { font-size:2.4rem;}
+                > p { 
+                    font-size:1.4rem;
+                    margin:20px 0 30px;
+                }
+                > a { 
+                    color:#fff; font-size:1.4rem;
+                    padding:5px 10px;
+                    border:solid 1px #fff;
+                }
+            }
+        }
+    }
+}    
+
+@include tab{ // 1024
+    // 브랜드
+    .ourBrand{
+        width:90%; margin:3% auto;
+        > div {
+            width:48%; height:auto;
+            margin:0;
+            margin-right:3%;
+            margin-bottom:3%;
+            > img {
+                &.pcImg { display: none;}
+                &.mobileImg { display: block;}
+            }
+            &:first-child {
+                width:100%;
+                text-align: center;
+                margin-bottom:10%;
+                > h2 {  font-size:6rem;}
+                > hr { width:20%;}
+                p { font-size:4rem;}
+                br { display:none;}
+            }
+            &:nth-child(2) { float:right; margin-right:0;}
+            &:last-child { float:right; margin-right:0;}
+            &.big {
+                width:48%; height:auto;
+                float:left;
+                margin-right:3%;
+                margin-bottom:3%;
+            }
+            > .overBox {
+                > div {
+                    > h2 {font-size:4rem;}
+                    > p { display:none}
+                    > a { display:none;}
+                }
+            }
+        }
+    }
+}
+
+/* 뉴스 룸 */
+.newsRoom { 
+    width:1000px; 
+    margin:0 auto;
+    font-family: 'Nanum Square' , sans-serif; 
+    > h2 {
+        font-size:2.4rem; 
+    }
+    > p { font-size: 1.8rem; color:#3d3d3d}
+    .slideBox {
+        overflow: hidden;
+        .newsSlide{
+            margin-top:40px;
+            .imgBox {
+                display: inline-block;
+                vertical-align: middle;
+                width:30%;
+                margin-right:5%;
+                border-radius: 50%;
+                overflow: hidden;
+                > img { width:100%;}
+            }
+            dl { 
+                width:60%;
+                display: inline-block;
+                vertical-align: middle;
+                font-family: 'Nanum Barun Gothic' , sans-serif;
+                text-align: left;
+                dt { font-size:1.6rem; margin-bottom:10px;}
+                dd { font-size:1.4rem; color:#797979;}
+            }
+            .newsSlide-pagination{ margin-top:40px; text-align: center;}
+            .swiper-pagination-bullet{ background: #7e7e7e; opacity: 1;}
+            .swiper-pagination-bullet-active { background: #000;}
+        }
+    }
+}
+
+@include tab{ // 1024
+    // 브랜드
+    .newsRoom{
+        width:90%; margin:10% auto 3%;
+        text-align: center;
+        > h2 {
+            font-size:6rem;
+        }
+        > p { font-size:4rem; margin-bottom:5%;}
+        .slideBox {
+            .newsSlide {
+                .swiper-slide { margin-bottom:5%;}
+                .imgBox { width:20%;}
+                dl { 
+                    width:72%;
+                    dt { font-size:4rem;}
+                    dd { font-size:3.5rem;}
+                }
+                .newsSlide-pagination{ margin-top:10%;}
+            }
+        }
+    }
+}
+
+/* info */
+.infoBox {
+    width:1000px; margin:100px auto 0;
+    > div { 
+        float: left;
+        width:28%;
+        margin-right:1%;
+        font-size:1.4rem;
+        &:nth-child(2) {
+            float:right;
+        }
+        &:last-child {
+            width:40%;
+            > p { 
+                width:80%;
+                font-size:1.2rem;
+                color:#7b7b7b;
+                margin-bottom:5px;
+                span { color:#2d95d1;}
+            }
+        }
+        > h2 { 
+            font-size:1.7rem; font-weight: normal; 
+            color:#010101; margin-bottom:15px;
+        }
+        > ul {
+            li { 
+                margin-bottom:10px;
+                a { 
+                    color:#565656;
+                    span { color:#9b9b9b;}
+                    img { vertical-align: bottom;}
+                }
+            }
+        }
+
+        #map { width:260px; height:100px; margin-bottom:12px;}
+    }
+}
+
+@include tab{ // 1024
+    // 브랜드
+    .infoBox{
+        width:90%; margin:10% auto 0;
+        > div {
+            width:60%;
+            margin:0;
+            &:first-child { width:40%;}
+            &:nth-child(2) { float:left;}
+            &:last-child { 
+                width:100%;
+                margin-top:5%;
+                #map { width:100%;}
+                > p { 
+                    width:100%;
+                    font-size:3.5rem;
+                }
+            }
+            > h2 {
+                font-size:5rem;
+            }
+            > ul {
+                li { 
+                    font-size:3.5rem;
+                    a {
+                        img { display:none;}
+                    }
+                }
+            }
+        }
+    }
+}
+

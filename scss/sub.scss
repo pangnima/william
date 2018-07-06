@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import "common.scss";
+
+
+/***********************************************************
+    서브비주얼
+************************************************************/
+.subVisual {
+    height:282px;
+    background-image:url('../images/sub/subVisual.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    text-align: center;
+    position: relative;
+    .textBox {
+        position:absolute;
+        bottom:60px;
+        color:#fff;
+        left:50%;
+        transform: translateX(-50%);
+        > h2 {
+            font-size: 3rem;
+        }
+        > p {
+            font-size:4.6rem;
+            font-weight: bold;
+        }
+    }
+}
+@include tab{ 
+    // 1024 
+    .subVisual { 
+        background:none;
+        height:200px;
+        .textBox {
+            width:100%;
+            color:#000;
+            > h2 { 
+                font-size:7rem;
+                font-family: 'Nanum Barun Gothic' , sans-serif; 
+            }
+            > p { 
+                br { display:none;}
+            }
+        }
+    }
+}
+
+/***********************************************************
+    서브네비게이션
+************************************************************/
+.subNav { 
+    background:#00a088;
+    text-align: center;
+    > ul {
+        > li {
+            display:inline-block;
+            height:53px; line-height: 53px;
+            padding:0 60px;
+            font-size:1.6rem;
+            font-weight: bold;
+            border-left:solid 1px #4fbaac;
+            &:last-child { border-right:solid 1px #4fbaac;}
+            a { color:#96c9c1;}
+            &.on {
+                a { color:#fff;}
+            }
+        }
+    }
+}
+@include tab{ 
+    // 1024  
+    .subNav {
+        background:#fff;
+        > ul {
+            > li {
+                border: none;
+                font-size: 3.6rem;
+                height: auto;
+                line-height: 1;
+                padding: 2% 5%;
+                font-family: 'Nanum Barun Gothic' , sans-serif; 
+                background: #cdcdcd;
+                border:none;
+                font-weight: normal;
+                &.on {
+                    background: #00a088;
+                }
+                a { color:#fff;}
+                &:last-child { border-right:none;}
+            }
+        }
+    }
+}
+
+
+/***********************************************************
+    컨텐츠
+************************************************************/
+.contentsWrap {
+    width:1000px; margin:0 auto;
+    padding:300px 0;
+    text-align: center;
+    font-size:5rem;
+    color:#7b7b7b;
+}
+@include tab{
+    // 1024 
+    .contentsWrap {
+        width:90%; margin:0 auto;
+    }
+  }

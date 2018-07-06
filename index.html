@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>윌리엄홀딩스</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">  <!-- 슬라이드 -->
+
+    <!-- JS -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/swiper.min.js"></script> <!-- 슬라이드 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1sRJXJTXZWScZHLP_awk6wWt-1wX7X4U&callback=initMap"
+    async defer></script>
+
+    
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="headerWrap clearfix">
+            <h1 class="logo">
+                <a href="#" class="pcLogo"><img src="./images/logo.png" alt="로고"></a>
+                <a href="#" class="mobileLogo"><img src="./images/mobile/logo.png" alt="로고"></a>
+            </h1>
+            <nav class="menuList">
+                <ul class="mainMeue pc clearfix">
+                    <li>
+                        <a href="#">회사소개<hr></a>
+                        <ul class="subMenu">
+                            <li><a href="#">개요</a></li>
+                            <li><a href="#">자회사 현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">보유브랜드<hr></a>
+                        <ul class="subMenu">
+                            <li><a href="#">폴스부띠끄</a></li>
+                            <li><a href="#">저스틴데이비스</a></li>
+                            <li><a href="#">윌리엄델퀸</a></li>
+                            <li><a href="#">청담소녀</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">뉴스룸<hr></a>
+                        <ul class="subMenu">
+                            <li><a href="#">뉴스룸</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">회사연혁<hr></a>
+                        <ul class="subMenu">
+                            <li><a href="#">회사연혁</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">임직원몰<hr></a>
+                        <ul class="subMenu">
+                            <li><a href="#">임직원몰</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 모바일메뉴 -->
+            <span class="mobileMenuBtn">
+                <img src="./images/mobile/menu.png" alt="">
+            </span>
+            <!-- 모바일메뉴끝 -->
+        </div>
+        <div class="blind"></div>
+    </header>
+
+    <!-- 메인비주얼 -->
+    <section class="mainVisual">
+        <img src="./images/mobile/mainvisual.png" alt="">
+    </section>
+
+    <!-- contents -->
+    <section>
+        <!-- ourBrand -->
+        <article class="ourBrand clearfix">
+            <div>
+                <h2>OUR BRAND</h2>
+                <hr>
+                <p>윌리엄 홀딩스의<br/>브랜드를<br/>소개합니다.</p>
+            </div>
+            <div>
+                <img class="pcImg" src="./images/brand/brand_1.png" alt="">
+                <img class="mobileImg" src="./images/mobile/brand/brand_1.png" alt="">
+                <div class="overBox">
+                    <div>
+                        <h2>저스틴 데이비스</h2>
+                        <p>정교한 디테일로 완성된<br/>하이퀄리티 악세사리 저스틴데이비스</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="big">
+                <img class="pcImg" src="./images/brand/brand_2.png" alt="">
+                <img class="mobileImg" src="./images/mobile/brand/brand_2.png" alt="">
+                <div class="overBox">
+                    <div>
+                        <h2>저폴스부띠끄</h2>
+                        <p>강렬한 스타일과 세련된 디자인<br/>영국에서 온 패션 브랜드 폴스부띠끄</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="pcImg" src="./images/brand/brand_3.png" alt="">
+                <img class="mobileImg" src="./images/mobile/brand/brand_3.png" alt="">
+                <div class="overBox">
+                    <div>
+                        <h2>윌리엄델퀸</h2>
+                        <p>영혼을 담아 빚어낸<br/>아름다움의 수호자 윌리엄델퀸</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="pcImg" src="./images/brand/brand_4.png" alt="">
+                <img class="mobileImg" src="./images/mobile/brand/brand_4.png" alt="">
+                <div class="overBox">
+                    <div>
+                        <h2>청담소녀</h2>
+                        <p>여성을 존중하는 마음으로<br/>걱정없는 안전한 생리대 청담소녀</p>
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- News Room -->
+        <article class="newsRoom">
+            <h2>NEWS ROOM</h2>
+            <p>윌리엄 홀딩스의 소식입니다.</p>
+            <div class="slideBox">
+                <div class="newsSlide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="imgBox">
+                                <img src="./images/news/slideImg_1.png" alt="슬라이드이미지">
+                            </div>
+                            <dl>
+                                <dt>폴스부띠끄</dt>
+                                <dd>배우 차정원, 로맨틱한 화보 공개 '청순미 물씬'</dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBox">
+                                <img src="./images/news/slideImg_2.png" alt="슬라이드이미지">
+                            </div>
+                            <dl>
+                                <dt>윌리엄델퀸</dt>
+                                <dd>엘론 머스크와 결별한 ‘엠버 허드’ 최근 근황 ...</dd>
+                            </dl>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="imgBox">
+                                <img src="./images/news/slideImg_3.png" alt="슬라이드이미지">
+                            </div>
+                            <dl>
+                                <dt>청담소녀</dt>
+                                <dd>청담소녀, 션 정해영 부부와 기부 행사 동참</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="newsSlide-pagination"></div>
+                </div>
+            </div>
+        </article>
+
+        <!-- info -->
+        <article class="infoBox clearfix">
+            <div>
+                <h2>SITE MAP</h2>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">보유브랜드</a></li>
+                    <li><a href="#">뉴스룸</a></li>
+                    <li><a href="#">회사연혁</a></li>
+                    <li><a href="#">임직원몰</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>FAMILY SITE</h2>
+                <ul>
+                    <li><a href="#">폴스부띠끄 <span>www.paulsboutique.co.kr</span> <img src="./images/linkIcon.png" alt="링크아이콘"></a></li>
+                    <li><a href="#">저스틴데이비스 <span>www.justindavis.co.kr</span> <img src="./images/linkIcon.png" alt="링크아이콘"></a></li>
+                    <li><a href="#">윌리엄델퀸 <span>www.williamdelquin.com</span> <img src="./images/linkIcon.png" alt="링크아이콘"></a></li>
+                    <li><a href="#">청담소녀 <span>www.chungdamgirl.com</span> <img src="./images/linkIcon.png" alt="링크아이콘"></a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>CONTACT US</h2>
+                <div id="map"></div>
+                <p>TEL 070-4880-1758  FAX 070-4880-1788</p>
+                <p>개인정보보호책임자 신재희(<span>master@gmail.com</span>)</p>
+            </div>
+        </article>
+    </section>
+    
+    <!-- footer -->
+    <footer>
+        <div class="footerWrap">
+            <h2>서울시 강남구 언주로172길 60 은산빌딩 3층 TEL : 02-123-5678</h2>
+            <p>COPYRIGHT(C) 2018 WILLIAMHOLDINGS. ALL RIGHTS RESERVED </p>
+
+            <!-- FAMILLY SITE -->
+            <div class="famillySite">
+                FAMILLY SITE
+                <img src="./images/arrow.png" alt="">
+                <ul>
+                    <li><a href="#">폴스부띠끄 <span>www.paulsboutique.co.kr</span> </a></li>
+                    <li><a href="#">저스틴데이비스 <span>www.justindavis.co.kr</span> </a></li>
+                    <li><a href="#">윌리엄델퀸 <span>www.williamdelquin.com</span> </a></li>
+                    <li><a href="#">청담소녀 <span>www.chungdamgirl.com</span> </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function initMap() {
+        var myLatLng = {lat:37.526745, lng: 127.038596};
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 17
+        });
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            title: 'asung',
+        });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlkKwzJLY_9qdSSUIJL2kqbcPkNYUEc3g&callback=initMap"
+        async defer></script>
+    </script>
+</body>
+
+
+
+</html>
